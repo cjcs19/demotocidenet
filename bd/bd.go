@@ -15,15 +15,15 @@ type TipoIdentificacion struct {
     NombreTipo              string
 }
 type Users struct {
-    Id                       int                   `gorm:"AUTO_INCREMENT" form:"id" json:"id"`
-    Firstname                string                `gorm:"not null" form:"firstname" json:"firstname"`
-    Lastname                 string                `gorm:"not null" form:"lastname" json:"lastname"`
+    Id                       int                   `gorm:"AUTO_INCREMENT" form:"id" json:"id"`    
     Nombre                   string                `gorm:"not null" form:"nombre" json:"nombre"`
     OtrosNombres             string                `gorm:"not null" form:"otrosnombres" json:"otrosnombres"`
     PrimerApellido           string                `gorm:"not null" form:"primerapellido" json:"primerapellido"`
     SegundoApellido          string                `gorm:"not null" form:"segundoapellido" json:"segundoapellido"`
     Idpais                   int                   `gorm:"not null" form:"idpais" json:"idpais"`
     IdTipoIdent              int                   `gorm:"not null" form:"idtipoident" json:"idtipoident"`
+    Correo                   string                `gorm:"not null" form:"correo" json:"correo"`
+
 }
 
 func InitDb() *gorm.DB {

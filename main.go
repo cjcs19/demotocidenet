@@ -25,7 +25,8 @@ func main() {
     v2 := r.Group("api/v2")
     {
         v2.POST("/pais", controllers.PostPais)
-        //v2.GET("/pais", GetPais)        
+        v2.POST("/identificacion", controllers.PostIdentificacion)
+        v2.GET("/pais", controllers.GetPaises)        
     }
 
     r.Run(":10000")
