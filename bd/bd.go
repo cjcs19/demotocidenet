@@ -2,6 +2,7 @@ package bd
 
 import (     
 	  _ "github.com/jinzhu/gorm/dialects/postgres"
+	  "github.com/jinzhu/gorm"
 )
 
 type PaisEmp struct {
