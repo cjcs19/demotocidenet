@@ -13,9 +13,10 @@ import (
 func main() {
     r := gin.Default()
 
-    //v1 := r.Group("api/v1")
-    //{
-    //    v1.POST("/users", PostUser)
+    v1 := r.Group("api/v1")
+    {
+        v1.POST("/users", controllers.PostUser)
+    }
     //    v1.GET("/users", GetUsers)
     //    v1.GET("/users/:id", GetUser)
     //    v1.PUT("/users/:id", UpdateUser)

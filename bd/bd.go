@@ -26,6 +26,14 @@ type Users struct {
 
 }
 
+func (usuario *Users) CrearCorreo(){
+    dominio:="cidenet.com.co"
+	if usuario.Idpais==1 {
+		dominio="cidenet.com.us"
+	}
+	usuario.Correo=usuario.Nombre + "." + usuario.PrimerApellido + "@" + dominio
+}
+
 func InitDb() *gorm.DB {
     
 	db, err := gorm.Open("postgres", "host=127.0.0.1 user=cidenet dbname=cidenetdb sslmode=disable password=cidenet2020")
