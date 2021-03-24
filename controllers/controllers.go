@@ -13,10 +13,8 @@ func PostPais(c *gin.Context) {
 	var pais bd.PaisEmp
 	c.Bind(&pais)
 
-	if pais.NombrePais != "" {
-		// INSERT INTO "users" (name) VALUES (user.Name);
-		db.Create(&pais)
-		// Display error
+	if pais.NombrePais != "" {		
+		db.Create(&pais)		
 		c.JSON(201, gin.H{"success": pais})
 	} else {
 		// Display error
@@ -32,7 +30,7 @@ func PostIdentificacion(c *gin.Context) {
 	c.Bind(&identificacion)
 
 	if identificacion.NombreTipo != "" {
-		// INSERT INTO "users" (name) VALUES (user.Name);
+		
 		db.Create(&identificacion)
 		// Display error
 		c.JSON(201, gin.H{"success": identificacion})
