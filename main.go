@@ -3,8 +3,7 @@ package main
 import (
 	"github.com/cjcs19/demotocidenet/controllers"
 	"github.com/gin-gonic/gin"
-	//"github.com/jinzhu/gorm"
-	//_ "github.com/jinzhu/gorm/dialects/postgres"
+	
 )
 
 
@@ -16,12 +15,7 @@ func main() {
     v1 := r.Group("api/v1")
     {
         v1.POST("/users", controllers.PostUser)
-    }
-    //    v1.GET("/users", GetUsers)
-    //    v1.GET("/users/:id", GetUser)
-    //    v1.PUT("/users/:id", UpdateUser)
-    //    v1.DELETE("/users/:id", DeleteUser)
-    //}
+    }    
 
     v2 := r.Group("api/v2")
     {

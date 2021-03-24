@@ -4,7 +4,7 @@ import (
 	"github.com/cjcs19/demotocidenet/bd"
 	"github.com/gin-gonic/gin"
 	"github.com/cjcs19/demotocidenet/utils"
-	//"fmt"
+	
 )
 
 func PostPais(c *gin.Context) {
@@ -72,3 +72,4 @@ func PostUser(c *gin.Context) {
 	c.JSON(201, gin.H{"success": user})
 
 }
+//curl -i -X POST -H "Content-Type: application/json" -d "{ \"Nombre\": \"Oliver\",\"OtrosNombres\":\"Jesus\",\"PrimerApellido\":\"Queen\",\"SegundoApellido\":\"Sulbaran\",\"Idpais\":2,\"IdTipoIdent\":1}" http://localhost:10000/api/v1/users
